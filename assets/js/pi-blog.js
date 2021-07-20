@@ -27,8 +27,16 @@ if (!JSON.parse(localStorage.getItem('blogs'))) {
 var addBlogBtn = $('#blog #add-blog-btn')
 var blogModal = $('#blog-modal')
 addBlogBtn.onclick = () => {
+    console.log(123123)
     blogModal.style.display = 'block'
     blogModal.style.opacity = 1
+    blogTitle.value = ''
+    blogContent.value = ''
+    blogDesc.value = ''
+    blogModalContent.style.background = `url("${backgroundList[0]}")`
+    blogTitle.style.color = textColorList[0]
+    blogContent.style.color = textColorList[0]
+    blogDesc.style.color = textColorList[0]
 }
 
 // show/hide button list 
@@ -186,8 +194,6 @@ function saveBlog(idx) {
         blogs[place].textColor = textColorList[chooseTCIndex]
         localStorage.setItem('blogs', JSON.stringify(blogs))
 
-        // chooseBGIndex = 0
-        // chooseTCIndex = 0
         idxForEdit = undefined
         renderBlog()
 
@@ -195,8 +201,6 @@ function saveBlog(idx) {
         var title = blogTitle.value.trim()
         var content = blogContent.value
         var description = blogDesc.value.trim()
-        // var background = chooseBGIndex
-        // var textColor = chooseTCIndex
         title !== '' ? title : title = 'untitled...'
         content !== '' ? content : content = ''
         description !== '' ? description : description = 'empty description...'
