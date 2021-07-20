@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+#header {
+    transition: top 1s;
+}
+
+.down-header {
+    top: 0px !important;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+#avatar {
+    width: 40px;
+    height: 40px;
+}
+
+#dropdown-content {
+    position: fixed;
+    top: 56px;
+    right: 0;
+}
+
+#dropdown-content i {
+    padding-top: 4px
+}
+
+#admin-access {
+    width: 160px;
+    outline: none;
+    padding: 7.5px 16px;
+}
+
+#to-do-list {
+    padding: 14.5px 14.5px;
+}
+
+#search-btn {
+    padding: 14.3px 19px;
+}
+
+#tab-bar {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+}
+
+#tab-bar .tab {
+    width: 20%;
+}
+
+#search-bar {
+    width: 50%;
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    display: none;
+}
+
+#search-bar input {
+    outline: none
+}
+
+/* SLIDER */
+#slider {
+    margin-top: 66px;
+}
+
+#slider .my-slide-show .countIndex {
+    width: 50px;
+    position: absolute;
+    left: 16px;
+}
+
+#slider .my-slide-show img {
+    width: 100%;
+}
+
+/* MAIN */
+#add-image {
+    padding: 8px 16px;
+    width: 64%;
+    margin: auto;
+}
+
+#add-image input {
+    outline: none;
+    width: 100%;
+    padding: 7.5px 16px;
+}
+
+#add-image #add-image-btn {
+    width: 5%;
+}
+
+/* Tab content */
+#home, #discover, #mood, #funny {
+    display: none;
+}
+
+#home #add-image, #discover #add-image, #mood #add-image, #funny #add-image {
+    display: none;
+}
+
+#my-self #my-self-area,
+#home #home-area,
+#discover #discover-area,
+#mood #mood-area,
+#funny #funny-area {
+    padding: 0px 32px;
+}
+
+#my-self #my-self-area .image-column img,
+#home #home-area .image-column img,
+#discover #discover-area .image-column img,
+#mood #mood-area .image-column img,
+#funny #funny-area .image-column img {
+    width: 100%;
+    padding: 12px;
+}
+
+#my-self #my-self-area .image-column .delete,
+#home #home-area .image-column .delete,
+#discover #discover-area .image-column .delete,
+#mood #mood-area .image-column .delete,
+#funny #funny-area .image-column .delete {
+    display: none;
+    top: 12px;
+    right: 12px;
+}
+
+#my-self #my-self-area .image-column .edit,
+#home #home-area .image-column .edit,
+#discover #discover-area .image-column .edit,
+#mood #mood-area .image-column .edit,
+#funny #funny-area .image-column .edit {
+    display: none;
+    top: 12px;
+    left: 12px;
+}
+
+
+/* #home #home-area .image-column .image-item:hover .delete,
+#discover #discover-area .image-column .image-item:hover .delete,
+#mood #mood-area .image-column .image-item:hover .delete,
+#funny #funny-area .image-column .image-item:hover .delete,  */
+#my-self #my-self-area .image-column .image-item:hover .delete {
+    display: block;
+}
+
+
+/* #home #home-area .image-column .image-item:hover .edit,
+#discover #discover-area .image-column .image-item:hover .edit,
+#mood #mood-area .image-column .image-item:hover .edit,
+#funny #funny-area .image-column .image-item:hover .edit, */
+#my-self #my-self-area .image-column .image-item:hover .edit {
+    display: block;
+}
+
+#my-self #modal-change #change-image,
+#home #modal-change #change-image,
+#discover #modal-change #change-image,
+#mood #modal-change #change-image,
+#funny #modal-change #change-image {
+    width: 50%;
+    margin: 10% auto;
+}
+
+#my-self #modal-change #change-image input,
+#home #modal-change #change-image input,
+#discover #modal-change #change-image input,
+#mood #modal-change #change-image input,
+#funny #modal-change #change-image input {
+    width: 100%;
+}
+
+#my-self #modal-change #change-image #change-image-btn,
+#home #modal-change #change-image #change-image-btn,
+#discover #modal-change #change-image #change-image-btn,
+#mood #modal-change #change-image #change-image-btn,
+#funny #modal-change #change-image #change-image-btn {
+    width: 5%;
+}
+
+
+
+
+/* ANIMATION */
+.animatezoom-out {
+    animation: animatezoom-out 0.4s;
+}
+
+@keyframes animatezoom-out {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(0)
+    }
+
+}

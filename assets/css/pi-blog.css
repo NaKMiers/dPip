@@ -1,0 +1,262 @@
+/* HEADER */
+#header {
+    transition: top 1s;
+    /* top: -56px; */
+}
+
+.down-header {
+    top: 0px !important;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+#avatar {
+    width: 40px;
+    height: 40px;
+}
+
+#dropdown-content {
+    position: fixed;
+    top: 56px;
+    right: 0;
+}
+
+#dropdown-content i {
+    padding-top: 4px
+}
+
+#to-do-list {
+    padding: 14.5px 14.5px;
+}
+
+/* CONTENT */
+#blog {
+    position: relative;
+    width: 80%;
+    margin: 64px auto 0px auto;
+    padding-bottom: 16px;
+}
+
+#blog #add-blog-btn {
+    padding: 6.5px 0px;
+}
+
+/* blog area */
+#blog-area #blog-card {
+    padding: 0px 52px 4px 16px;
+    margin-top: 16px;
+    border-radius: 8px;
+    text-shadow: 2px 1px 2px #fff;
+}
+
+#blog-area #blog-card .blog-title {
+    cursor: pointer;
+}
+
+#blog-area #blog-card .btn {
+    height: 100%;
+}
+
+#blog-area #blog-card .btn .del {
+    width: 40px;
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* blog modal */
+#blog-modal {
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+#blog-modal-content {
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 56px;
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+/* enter title */
+#blog-modal-content .enter-title {
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    padding: 4px 16px;
+}
+
+#blog-modal-content .enter-title textarea {
+    height: 45px;
+    border: 3px solid khaki;
+    border-radius: 8px;
+    outline: none;
+    background: transparent;
+    font-size: 26px;
+    padding: 0px 16px;
+}
+
+/* enter desc */
+#blog-modal-content .enter-desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 16px;
+}
+
+#blog-modal-content .enter-desc textarea {
+    height: 64px;
+    border: 3px solid khaki;
+    border-radius: 8px;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    padding: 4px 16px;
+}
+
+/* enter content */
+#blog-modal-content .enter-content {
+    position: absolute;
+    top: 53px;
+    bottom: 72px;
+    width: 100%;
+    padding: 12px 16px;
+}
+
+#blog-modal-content .enter-content textarea {
+    height: 100%;
+    border: 3px solid khaki;
+    border-radius: 8px;
+    outline: none;
+    background: transparent;
+}
+
+#blog-modal .btn {
+    position: absolute;
+    top: 98px;
+    right: -400px;
+    width: 10%;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    transition: right ease-in-out 1.2s;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.show-btn-list {
+    right: 0 !important;
+}
+
+#blog-modal .btn .show {
+    width: 10px;
+    padding: 8px;
+}
+
+#blog-modal .btn .save {
+    padding: 8px;
+    width: 100%;
+}
+
+#blog-modal .btn .exit {
+    padding: 8px;
+    width: 100%;
+}
+
+#blog-modal .btn .select-background {
+    padding: 8px;
+    width: 100%;
+}
+
+#blog-modal .btn .select-text-color  {
+    padding: 8px;
+    width: 100%;
+}
+
+/* modal set background */
+#blog-modal #set-background {
+    display: none;
+    position: absolute;
+    top: 124px;
+    bottom: 143px;
+    right: 50%;
+    transform: translate(50%, 0%);
+}
+
+#blog-modal #set-background .bg-container {
+    position: absolute;
+    top: 32px;
+    bottom: 32px;
+    width: calc(100% - 64px);
+    right: 50%;
+    transform: translate(50%, 0%);
+    padding: 8px;
+    overflow: scroll;
+    border-radius: 8px;
+}
+
+#blog-modal #set-background .bg-container .ok-btn {
+    padding: 0px 8px;
+}
+
+#blog-modal #set-background .bg-item {
+    display: inline-block;
+    height: 33.33333%;
+    padding: 8px;
+}
+
+
+#blog-modal #set-background .bg-item .image {
+    width: 100%;
+    height: 100%;
+    background: url('../img/background/11.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-origin: content-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+/* modal set text color */
+#blog-modal #set-text-color {
+    display: none;
+    position: absolute;
+    top: 156px;
+    height: 40px;
+    right: 50%;
+    transform: translate(50%, 0%);
+    padding: 0px 32px;
+}
+
+#blog-modal #set-text-color .text-color-container {
+    height: 100%;
+    border-radius: 8px;
+    padding: 0px 8px;
+    box-shadow: 0px 2px 8px 0px #000;
+}
+
+#blog-modal #set-text-color .text-color-container .color-item {
+    height: 40px;
+}
+
+#blog-modal #set-text-color .text-color-container span {
+    padding: 13px;
+}
+
+@media (max-width: 600px) {    
+    #blog-modal-content {
+        bottom: 0;
+    }
+    
+    #blog-modal #set-background {
+        bottom: 87.5px;
+    }
+}

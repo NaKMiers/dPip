@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pi-learning</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/w3css/w3.css">
+    <link rel="stylesheet" href="./assets/css/pi-learning.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header" class="w3-top w3-bar w3-black">
+        <div id="account" class="w3-bar-item w3-right w3-dropdown-click w3-animate-opacity">
+            <img id="avatar" class="w3-circle" src="./assets/img/avt.png" alt="avatar">
+            <div id="dropdown-content" class="w3-dropdown-content w3-card-4 w3-bar-block w3-animate-right">
+                <a class="w3-bar-item w3-button">Profile <i class="far fa-address-card w3-right w3-large"></i></a>
+                <a class="w3-bar-item w3-button">Help <i class="far fa-question-circle w3-right w3-large"></i></a>
+                <a class="w3-bar-item w3-button">Setting <i class="fas fa-cogs w3-right w3-large"></i></a>
+                <a id="log-out" class="w3-bar-item w3-button">Log out <i class="fas fa-sign-out-alt w3-right w3-large"></i></a>
+            </div>
+        </div>
+        <a id="to-do-list" class="w3-bar-item w3-button w3-right w3-large" href="./to-do-list/to-do-list.html">To Do List</a>
+        <div class="w3-bar-item w3-dropdown-hover">
+            <img id="logo" class="w3-circle" src="./assets/img/dpip.jpg" alt="dPip">
+            <div class="w3-dropdown-content">
+                <span id="slogan" class="w3-container w3-hide-large w3-hide-medium" style="position: fixed; color: white;">Nothing is impossible</span>
+            </div>
+        </div>
+        <!-- <span id="slogan" class="w3-bar-item w3-xlarge w3-hide-small">Nothing is impossible</span> -->
+
+        <div id="tab-bar" class="w3-cell-row w3-hide-small">
+            <a class="w3-cell w3-button w3-large w3-bottombar tab tab1 w3-border-red" href="#quizzes" tab-content="quizzes">Quizzes</a>
+            <a class="w3-cell w3-button w3-large w3-bottombar tab tab2" href="#remember" tab-content="remember">Remember</a>
+            <a class="w3-cell w3-button w3-large w3-bottombar tab tab3" href="#random" tab-content="random">Random</a>
+            <a class="w3-cell w3-button w3-large w3-bottombar tab tab4" href="#yes-or-no" tab-content="yes-or-no">Yes/No</a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div id="quizzes" class="tab-content">
+            <div id="sub-quizzes" class="w3-col s12 m10 l8 w3-container">
+                <div id="manage-word" class="w3-cell-row w3-round-large">
+                    <div id="add-word-btn" class="w3-cell w3-mobile w3-left w3-button w3-large w3-ripple w3-black"><i class="fas fa-plus"></i></div>
+                    <input type="text" name="add-vocabulary-input" class="w3-cell w3-mobile w3-input" placeholder="Enter new vocabulary...">
+                    <input type="text" name="add-mean-input" class="w3-cell w3-mobile w3-input" placeholder="Enter mean...">
+                </div>
+                <div id="quizzes-area">
+                    <select class="filter-select w3-select">
+                        <option class="newest filter w3-button w3-col w3-black" value="newest">Newest</option>
+                        <option class="alphabet filter w3-button w3-col w3-black" value="alphabet">Alphabet</option>
+                        <option class="favorites filter w3-button w3-col w3-black" value="favorites">Favorites</option>
+                    </select>
+                    <ul id="quizzes-list" class="w3-ul w3-blue"></ul>
+                </div>
+            </div>
+            <div id="start-quizzes" class="w3-bottom w3-ripple w3-black w3-hover-red">START</div>
+            <div id="quizzes-modal">
+                <div class="quizzes-modal-content w3-col s12 m10 l8 w3-container w3-teal w3-animate-opacity">
+                    <div id="show-word" class="w3-white">
+                        <span class="">Televison</span>
+                    </div>
+
+                    <div id="answer" class="w3-row">
+                        <div class="answer answer1 w3-col s6 m3">
+                            <span class="w3-black w3-button" idx="0"></span>
+                        </div>
+                        <div class="answer answer2 w3-col s6 m3">
+                            <span class="w3-black w3-button" idx="1"></span>
+                        </div>
+                        <div class="answer answer3 w3-col s6 m3">
+                            <span class="w3-black w3-button" idx="2"></span>
+                        </div>
+                        <div class="answer answer4 w3-col s6 m3">
+                            <span class="w3-black w3-button" idx="3"></span>
+                        </div>
+                    </div>
+
+                    <div id="finish" class="w3-red w3-circle w3-xxlarge w3-button">FINISH</div>
+                </div>
+
+                <div id="result-modal">
+                    <div class="result-modal-content w3-card-4 w3-blue w3-animate-opacity">
+                        <h1n class="w3-jumbo">Result</h1>
+                        <h4>Complete: <span class="comOn"></span>/<span class="comUnder"></span></h4>
+                        <h4>Right: <span class="riOn"></span>/<span class="riUnder"></span></h4>
+                        <h4>Wrong: <span class="wrOn"></span>/<span class="wrUnder"></span></h4>
+                        <h4>Correct ratio: <span class="corRatio"></span></h4>
+                        <span class="exit-btn w3-button"><i class="far fa-times-circle"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div id="remember" class="tab-content w3-center">
+            <h2 id="rem-level">Level: 0</h2>
+            <div id="remember-area" class="w3-display-container">
+                <div class="rem-item w3-display-topleft">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-topmiddle">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-topright">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-left">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-middle">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-right">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-bottomleft">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-bottommiddle">
+                    <div class="rem-cell"></div>
+                </div>
+                <div class="rem-item w3-display-bottomright">
+                    <div class="rem-cell"></div>
+                </div>
+            </div>
+            <div id="remember-cover" class="">
+                <div class="menu-selection w3-card-4">
+                    <div id="menu-color" class="menu-color w3-green">
+                        <div class="item-color w3-cell-row w3-pale-red">
+                            <div class="cell-color">
+                                <div class="cell-cell w3-black" color="#000"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-white" color="#fff"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-red" color="#f44336"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-blue" color="#2196F3"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-green" color="#4CAF50"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-yellow" color="#ffeb3b"></div>
+                            </div>
+                        </div>
+                        <div class="background-color w3-cell-row w3-pale-green">
+                            <div class="cell-color">
+                                <div class="cell-cell w3-black" color="#000"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-white" color="#fff"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-red" color="#f44336"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-blue" color="#2196F3"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-green" color="#4CAF50"></div>
+                            </div>
+                            <div class="cell-color">
+                                <div class="cell-cell w3-yellow" color="#ffeb3b"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="go" class="w3-white w3-cell-row">
+                        <div class="go-g w3-cell"></div>
+                        <div class="go-o w3-cell"></div>
+                    </div>
+                </div>
+                <div id="not-choose-color" class="w3-panel w3-pale-red w3-border w3-display-container w3-animate-opacity">
+                    <span class="close w3-button w3-display-topright w3-transparent">&times;</span>
+                    <p>You have not selected a color, or selected the same color. Please choose again!</p>
+                </div>
+            </div>
+            <div id="fail-rem-game" class="w3-panel w3-transparent w3-border w3-display-container w3-animate-opacity">
+                <span class="w3-jumbo">You Lose!</span>
+            </div>
+            <div id="remember-history" class="w3-card-4 w3-col s12 m6 l4">
+                <div class="show-hide-btn"><i class="fas fa-chevron-up w3-xlarge"></i></i></div>
+                <div class="title" title="click click here to clear history"><h2 class="w3-black w3-hover-light-gray">History</h2></div>
+                <ul id="history-area" class=" w3-ul"></ul>
+            </div>
+        </div>
+
+        <div id="random" class="tab-content">
+            <div id="add-tag-random" class="w3-cell-row w3-round-large w3-black">
+                <input type="text" name="add-tag-input" class="w3-input w3-round-large w3-cell" placeholder="Add option..." maxlength="7">
+                <div id="add-tag-btn" class="w3-button w3-round-large w3-cell w3-ripple"><i class="fas fa-plus"></i></div>
+            </div>
+            <div id="random-area" class="w3-col s12 m10 l8 w3-black">
+                <div id="random-content-bar" class="w3-bar"></div>
+            </div>
+            <div class="w3-cell-row" style="position: fixed; bottom: 0; width: 100%;">
+                <div class="w3-cell w3-black w3-xlarge w3-center w3-button w3-round-large" style="width: 50%;">
+                    <div class="w3-row random-cell" >
+                        <input type="number" name="set-time" placeholder="Enter time(second)">
+                        <span id="random-btn" class="w3-button w3-hover-white"><i class="fas fa-random"></i></span>
+                    </div>
+                </div>
+                <div id="clear-all-btn" class="w3-cell w3-black w3-xlarge w3-center w3-button w3-round-large" style="width: 50%;"><i class="fas fa-trash-alt"></i></div>
+            </div>
+
+            <div id="tag-modal" class="w3-modal">
+                <div id="tag-modal-content" class="w3-modal-content w3-transparent w3-margin-top-16 w3-animate-zoom"></div>
+            </div>
+        </div>
+
+        <div id="yes-or-no" class="tab-content">
+            <div id="yes-or-no-area" class="w3-round-xlarge w3-col s11 m10 l9">
+                <div id="yesss" class="w3-round-xlarge w3-green w3-center"></div>
+                <div id="noooo" class="w3-round-xlarge w3-red w3-center"></div>
+                <button id="go" class="w3-round-xlarge w3-card-4 w3-display-middle w3-button w3-hover-white w3-black w3-jumbo">GO</button>
+            </div>
+        </div>
+
+    <script src="./assets/js/pi-learning.js"></script>
+</body>
+</html>

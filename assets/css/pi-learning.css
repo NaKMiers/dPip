@@ -1,0 +1,641 @@
+/* HEADER */
+#header {
+    transition: top 1s;
+    /* top: -56px;
+    */
+}
+
+.down-header {
+    top: 0px !important;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+#avatar {
+    width: 40px;
+    height: 40px;
+}
+
+#dropdown-content {
+    position: fixed;
+    top: 56px;
+    right: 0;
+}
+
+#dropdown-content i {
+    padding-top: 4px
+}
+
+#to-do-list {
+    padding: 14.5px 14.5px;
+}
+
+#tab-bar {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+}
+
+#tab-bar .tab {
+    width: 20%;
+}
+
+/* MAIN */
+/* yes or no */
+#yes-or-no-area {
+    position: fixed;
+    height: calc(70% - 56px);
+    top: calc(50% + 23px);
+    left: 49.99999%;
+    transform: translate(-50%, -50%);
+}
+
+#yesss{
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    transition: transform 0.4s;
+    background: url('https://images.pexels.com/photos/3825278/pexels-photo-3825278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#noooo {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    transition: transform 0.4s;
+    background: url('https://images.pexels.com/photos/3825295/pexels-photo-3825295.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#yesss:hover {
+    transform: scale(1.05);
+    top: 0%;
+    left: 0%;
+    box-shadow: 0px 0px 15px 0px #000;
+}
+
+#noooo:hover {
+    transform: scale(1.05);
+    top: 0%;
+    right: 0%;
+    box-shadow: 0px 0px 15px 0px #000;
+}
+
+/* random */
+#random {
+    position: relative;
+    top: 56px;
+}
+
+#add-tag-random {
+    padding: 8px 16px;
+    width: 64%;
+    margin: auto;
+    margin-top: 32px;
+}
+
+#add-tag-random input {
+    outline: none;
+    width: 100%;
+    padding: 7.5px 16px;
+}
+
+#add-tag-random #add-tag-btn {
+    width: 5%;
+}
+
+#random-area {
+    position: absolute;
+    padding: 12px;
+    margin-top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#random-area .tag-random  {
+    padding: 8px 8px;
+}
+
+#random-area .tag-random .tag-random-content {
+    height: 12em;
+    padding: 16px 4px;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+#random .random-cell {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+#random .random-cell input {
+    width: 50%;
+    margin-top: 0.7%;
+    padding: 5px 10px;
+    font-size: 18px;
+    outline: none;
+}
+
+#random .random-cell #random-btn {
+    width: 28%;
+    margin-right: 3.3333%;
+}
+
+#tag-modal .tag-random {
+    width: 150px;
+    height: 300px;
+    padding: 16px;
+    margin: auto;
+    box-shadow: 0px 0px 15px 0px #fff;
+}
+
+#tag-modal .tag-random .tag-random-content {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+}
+
+/* remember */
+#remember {
+    position: relative;
+    top: 56px;
+}
+
+#remember-area {
+    position: absolute;
+    width: 26%;
+    padding-top: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+#remember-area .rem-item {
+    width: 33.33333%;
+    height: 33.33333%;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#remember-area .rem-item .rem-cell {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* remember cover */
+#remember-cover {
+    display: block;
+    position: absolute;
+    width: 26%;
+    padding-top: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#remember-cover .menu-selection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+#remember-cover .menu-color {
+    width: 100%;
+    height: 36%;
+}
+
+#remember-cover .item-color {
+    width: 100%;
+    height: 50%;
+    padding: 0px;
+}
+
+#remember-cover .background-color {
+    width: 100%;
+    height: 50%;
+    padding: 0px 0px;
+}
+
+#remember-cover .menu-color .cell-color {
+    display: inline-block;
+    width: 16.66666%;
+    height: 100%;
+    padding: 1.2% 1.1%;
+}
+
+#remember-cover .menu-color .cell-color .cell-cell {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#remember-cover .menu-color .cell-color .cell-cell:hover {
+    opacity: 0.6;
+}
+
+#remember-cover #go {
+    padding: 12px 18px;
+    height: 64%;
+    cursor: pointer;
+}
+
+#remember-cover #go:hover {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+#remember-cover #go .go-g {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background: url('../img/character-G.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 30px;
+}
+
+#remember-cover #go .go-o {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background: url('../img/character-O.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 30px;
+}
+
+#remember-cover #not-choose-color {
+    display: none;
+    position: fixed;
+    width: 75%;
+    top: 20%;
+    right: 50%;
+    transform: translate(50%, 0%);
+    padding: 16px 14px;
+}
+
+#remember #fail-rem-game {
+    display: none;
+    position: absolute;
+    top: 350%;
+    left: 50%;
+    width: 23.5%;
+    padding: 0px 0px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 15px 1px #000;
+    font-weight: bold;
+}
+
+
+/* remember history */
+#remember-history {
+    position: fixed;
+    bottom: -41.8%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 45%;
+    transition: bottom 1s ease-in-out
+}
+
+.show-history-card {
+    bottom: -0% !important;
+}
+
+#remember-history .show-hide-btn {
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+}
+
+#remember-history .title {
+    cursor: pointer;
+}
+
+#remember-history h2 {
+    margin: 1px 0px 7px 0px;
+}
+
+#history-area {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#history-area .history-row {
+    height: 40px;
+}
+
+#history-area .history-row .level {
+    padding-left: 4px;
+}
+
+/* quizzes */
+#sub-quizzes {
+    position: relative;
+    top: 66px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#sub-quizzes #manage-word #add-word-btn {
+    /* display: none; */
+    height: 40px;
+    text-align: center;
+}
+
+#sub-quizzes #manage-word input {
+    width: calc(50% - 47.75px/2);
+    height: 40px;
+    padding: 0px 16px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    outline: none;
+}
+
+.invalid-word-input {
+    border: 3px solid #f44336 !important;
+}
+
+.invalid-word-input::placeholder {
+    color: #f44336;
+}
+
+#start-quizzes {
+    height: 56px;
+    font-size: 32px;
+    text-align: center;
+    line-height: 56px;
+    cursor: pointer;
+    transition: bottom 0.5s ease;
+}
+
+#start-quizzes:hover {
+    font-size: 32px;
+    bottom: 8px;
+    box-shadow: 0px 8px 10px 0px #000;
+}
+
+/* quizzes area */
+#quizzes-area {
+    position: relative;
+    margin-bottom: 64px;
+    margin-top: 30.4px
+}
+
+#quizzes-area .filter-select {
+    display: inline-block;
+    position: absolute;
+    top: -56px;
+    right: 0;
+    width: 20%;
+    height: 30px;
+    margin-top: 26px;
+    padding: 0px 12px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    outline: none;
+}
+
+#quizzes-area .filter {
+    width: 33.3333%;
+    height: 100%;
+    padding: 6px 0px 0px 0px;
+}
+
+#quizzes-list li {
+    padding: 0px;
+    margin: 0px 0px;
+}
+
+#quizzes-list li .word {
+    cursor: pointer;
+}
+
+#quizzes-list li input {
+    display: none;
+}
+
+#quizzes-list li .word {
+    font-size: 18px;
+    padding: 6.5px 16px;
+}
+
+#quizzes-list .btn {
+    width: 12%;
+}
+
+#quizzes-list .btn .del {
+    padding: 0px 0px;
+    font-size: 22px;
+}
+
+#quizzes-list .btn .del i {
+    line-height: 40px;
+    width: 40px;
+}
+
+#quizzes-list .btn .like {
+    text-align: center;
+    padding: 0px 0px;
+}
+
+#quizzes-list .btn .like i {
+    line-height: 40px;
+    width: 40px;
+}
+
+/* quizzes modal */
+#quizzes-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+#quizzes-modal .quizzes-modal-content {
+    position: absolute;
+    top: 56px;
+    right: 50%;
+    height: 100%;
+    transform: translate(50%);
+}
+
+#quizzes-modal #show-word {
+    position: absolute;
+    top: 2%;
+    right: 50%;
+    transform: translate(50%);
+    width: 90%;
+    height: calc(38% - 1px);
+    font-size: 48px;
+}
+
+#quizzes-modal #show-word span {
+    position: absolute;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 3px;
+}
+
+#quizzes-modal #answer {
+    position: absolute;
+    top: 42%;
+    right: 50%;
+    transform: translate(50%);
+    width: 80%;
+    font-size: 20px;
+}
+
+#quizzes-modal #answer .answer {
+    padding: 8px;
+}
+
+#quizzes-modal #answer .answer span {
+    width: 100%;
+}
+
+#quizzes-modal #finish {
+    position: absolute;
+    padding: 67.9px 30px;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    border: 12px solid #000;
+}
+
+#quizzes-modal #result-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center
+}
+
+#quizzes-modal #result-modal .result-modal-content {
+    position: absolute;
+    top: 56px;
+    right: 50%;
+    transform: translate(50%);
+    width: 60%;
+    height: 40%;
+    padding: 10px 16px;
+}
+
+#quizzes-modal #result-modal .result-modal-content .exit-btn {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 24px;
+}
+
+#quizzes-modal #result-modal .result-modal-content h4 {
+    font-size: 28px;
+}
+
+@media (max-width: 600px) {
+    /* remember */
+    #remember-area {
+        width: 75%;
+        padding-top: 75%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #remember-cover {
+        position: absolute;
+        width: 75%;
+        padding-top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+
+    #remember #fail-rem-game {
+        width: 71%;
+    }
+    
+    /* quizzes */
+    #quizzes-area .filter-select{
+        width: 30%;
+    }
+
+    /* finish btn */
+    #quizzes-modal #finish {
+        bottom: 25%;
+    }
+
+    #quizzes-modal #result-modal .result-modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 601px) {
+    /* remember */
+    #remember-area {
+        width: 55%;
+        padding-top: 55%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #remember-cover {
+        position: absolute;
+        width: 55%;
+        padding-top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+
+    #remember #fail-rem-game {
+        width: 52%;
+    }
+
+    /* quizzes */
+    #quizzes-area .filter-select{
+        width: 24%;
+    }
+
+    #quizzes-modal #result-modal .result-modal-content {
+        width: 76%;
+    }
+}

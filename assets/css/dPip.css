@@ -1,0 +1,266 @@
+/* Common */
+
+/* START */
+#start {
+    position: fixed;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, calc(-50% - 28px));
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
+    transition: width 0.8s ease-in-out, height 1.6s ease-in-out, top 1.6s ease-in-out;
+}
+
+.down-button {
+    top: calc(50% + 56px) !important;
+}
+
+#sub-start {
+    width: 91px;
+    height: 91px;
+    line-height: 91px;
+    transition: width 1.6s ease-in-out, height 0.8s ease-in, font 1.6s linear;
+}
+
+#start:hover {
+    width: 156px;
+    height: 156px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#start:hover #sub-start {
+    padding: 0;
+    width:109.2px;
+    height:109.2px;
+    line-height:109.2px;
+}
+
+/* MODAL */
+#modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* HEADER */
+#header {
+    transition: top 1s;
+    top: -56px;
+}
+
+.down-header {
+    top: 0px !important;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+#slogan {
+    padding: 10px 10px;
+    letter-spacing: 3px;
+}
+
+#avatar {
+    width: 40px;
+    height: 40px;
+}
+
+#dropdown-content {
+    position: fixed;
+    top: 56px;
+    right: 0;
+}
+
+#dropdown-content i {
+    padding-top: 4px
+}
+
+#to-do-list {
+    padding: 14.5px 14.5px;
+}
+
+/* MAIN */
+#main {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 56px);
+    margin-top: 56px;
+    background: url('../img/asf.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity linear 1s;
+}
+
+.show-main {
+    opacity: 1 !important;
+}
+
+#content {
+    height: 95%;
+    position: absolute;
+}
+
+#content .content {
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+}
+
+#content .content .description {
+    opacity: 0;
+    transition: opacity linear 0.4s;
+}
+
+#content .content:hover .description {
+    opacity: 1;
+    animation: animatebottom linear 0.3s;
+}
+
+.img1-1, .img2-1, .img3-4, .img4-4 {
+    position: relative;
+    animation: animatetop ease-in-out 2s;
+}
+
+.img1-3, .img2-3, .img3-3, .img4-1 {
+    position: relative;
+    animation: animatebottom ease-in-out 3s;
+}
+
+.img1-2, .img2-2, .img3-1, .img4-2 {
+    position: relative;
+    animation: animateleft ease-in-out 4s;
+}
+
+.img1-4, .img2-4, .img3-2, .img4-3 {
+    position: relative;
+    animation: animateright ease-in-out 5s;
+}
+
+@media (min-width: 601px) {
+    .content.learning {
+        bottom: 6px;
+        right: 6px;
+        transition: bottom 0.4s, right 0.4s;
+    }
+    
+    .content.music {
+        bottom: 6px;
+        left: 6px;
+        transition: bottom 0.4s, left 0.4s;
+    }
+    
+    .content.image {
+        top: 6px;
+        right: 6px;
+        transition: top 0.4s, right 0.4s;
+    }
+    
+    .content.blog {
+        top: 6px;
+        left: 6px;
+        transition: top 0.4s, left 0.4s;
+    }
+    
+    .content.learning:hover {
+        bottom: 16px;
+        right: 16px;
+        box-shadow: 10px 10px 20px 0px #000;
+    }
+    
+    .content.music:hover {
+        bottom: 16px;
+        left: 16px;
+        box-shadow: -10px 10px 20px 0px #000;
+    }
+    
+    .content.image:hover {
+        top: 16px;
+        right: 16px;
+        box-shadow: 10px -10px 20px 0px #000;
+    }
+    
+    .content.blog:hover {
+        top: 16px;
+        left: 16px;
+        box-shadow: -10px -10px 20px 0px #000;
+    }
+}
+
+/* Animation */
+@keyframes animateopacity {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px; opacity: 0
+    }
+
+    to {
+        top: 0; opacity: 1
+    }
+
+}
+
+@keyframes animateleft {
+        from {
+        left:-300px; opacity: 0
+    }
+
+    to {
+        left: 0; opacity: 1
+    }
+
+}
+
+@keyframes animateright {
+    from {
+        right:-300px; opacity: 0
+    }
+
+    to {
+        right: 0; opacity: 1
+    }
+
+}
+
+@keyframes animatebottom {
+    from {
+        bottom:-300px; opacity: 0
+    }
+
+    to {
+        bottom: 0; opacity: 1
+    }
+
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+
+}
+
+
+

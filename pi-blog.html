@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pi-blog</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/w3css/w3.css">
+    <link rel="stylesheet" href="./assets/css/pi-blog.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header" class="w3-top w3-bar w3-black">
+        <div id="account" class="w3-bar-item w3-right w3-dropdown-click w3-animate-opacity">
+            <img id="avatar" class="w3-circle" src="./assets/img/avt.png" alt="avatar">
+            <div id="dropdown-content" class="w3-dropdown-content w3-card-4 w3-bar-block w3-animate-right">
+                <a class="w3-bar-item w3-button">Profile <i class="far fa-address-card w3-right w3-large"></i></a>
+                <a class="w3-bar-item w3-button">Help <i class="far fa-question-circle w3-right w3-large"></i></a>
+                <a class="w3-bar-item w3-button">Setting <i class="fas fa-cogs w3-right w3-large"></i></a>
+                <a id="log-out" class="w3-bar-item w3-button">Log out <i class="fas fa-sign-out-alt w3-right w3-large"></i></a>
+            </div>
+        </div>
+        <a id="to-do-list" class="w3-bar-item w3-button w3-right w3-large" href="./to-do-list/to-do-list.html">To Do List</a>     
+        <div class="w3-bar-item w3-dropdown-hover">
+            <img id="logo" class="w3-circle" src="./assets/img/dpip.jpg" alt="dPip">
+            <div class="w3-dropdown-content">
+                <span id="slogan" class="w3-container w3-hide-large w3-hide-medium" style="position: fixed; color: white;">Nothing is impossible</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main>
+        <div id="blog" class="s12 m10 l8 w3-container">
+            <div id="add-blog-btn" class="w3-button w3-block w3-black w3-large"><i class="fas fa-plus"></i></div>
+
+            <div id="blog-area"></div>
+
+            <div id="blog-modal" class="w3-modal w3-animate-zoom">
+                <div id="blog-modal-content" class="w3-white w3-col s12 m10 l8 w3-animate-opacity">
+                    <form action="">
+                        <div class="enter-title">
+                            <textarea class="w3-input" placeholder="Enter the blog title..."></textarea>
+                        </div>
+                        <div class="enter-content">
+                            <textarea class="w3-input" placeholder="Enter the blog content..."></textarea>
+                        </div>
+                        <div class="enter-desc">
+                            <textarea class="w3-input" placeholder="Enter the blog description..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="btn w3-cell-row">
+                    <div class="show w3-cell w3-button w3-text-khaki w3-border-right">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="save w3-cell w3-button w3-text-khaki w3-border-right">Save</div>
+                    <div class="exit w3-cell w3-button w3-text-khaki w3-border-right">Exit</div>
+                    <div class="select-background w3-cell w3-button w3-text-khaki w3-border-right">Select Background</div>
+                    <div class="select-text-color w3-cell w3-button w3-text-khaki">Select Text Color</div>
+                </div>
+                <div id="set-background" class="w3-col s12 m10 l8">
+                    <div class="bg-container w3-card-2 w3-row">
+                        <div class="ok-btn w3-button w3-block">
+                            <span class="w3-khaki w3-text-white w3-block w3-round-large w3-xlarge"><i class="fas fa-check-circle"></i></span>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                        <div class="bg-item w3-col s4 m3">
+                            <div class="image w3-ripple"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="set-text-color" class="w3-col s12 m10 l8">
+                    <div class="text-color-container w3-row w3-card-4">
+                        <div class="color-item w3-button w3-col s1-7">
+                            <span class="w3-badge w3-black w3-card"></span>
+                        </div>
+                        <div class="color-item w3-button w3-col s1-7">
+                            <span class="w3-badge w3-white w3-card"></span>
+                        </div>
+                        <div class="color-item w3-button w3-col s1-7">
+                            <span class="w3-badge w3-brown w3-card"></span>
+                        </div>
+                        <div class="color-item w3-button w3-col s1-7">
+                            <span class="w3-badge w3-red w3-card"></span>
+                        </div>
+                        <div class="color-item w3-button w3-col s1-7">
+                            <span class="w3-badge w3-green w3-card"></span>
+                        </div>
+                        <div class="color-item w3-button w3-col s1-7">
+                            <span class="w3-badge w3-blue w3-card"></span>
+                        </div>
+                        <div class="color-item w3-button w3-col s1-7">
+                            <span class="w3-badge w3-yellow w3-card"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <img src="./assets/img/background/" alt="">
+
+    <script src="./assets/js/pi-blog.js"></script>
+</body>
+</html>
