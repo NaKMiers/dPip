@@ -50,7 +50,7 @@ btnShow.onclick = () => {
 // exit blog modal
 var exitBtn = $('#blog-modal .btn .exit')
 exitBtn.onclick = () => {
-    btnList.classList.toggle('show-btn-list')
+    btnList.classList.remove('show-btn-list')
     btnList.className.includes('show-btn-list') ? btnShow.innerHTML = '<i class="fas fa-chevron-right"></i>' : btnShow.innerHTML = '<i class="fas fa-chevron-left"></i>'
     
     blogModal.style.opacity = 0
@@ -227,7 +227,7 @@ function saveBlog(idx) {
         renderBlog()
     }
 
-    btnList.classList.toggle('show-btn-list')
+    btnList.classList.remove('show-btn-list')
     btnList.className.includes('show-btn-list') ? btnShow.innerHTML = '<i class="fas fa-chevron-right"></i>' : btnShow.innerHTML = '<i class="fas fa-chevron-left"></i>'
     
     blogModal.style.opacity = 0

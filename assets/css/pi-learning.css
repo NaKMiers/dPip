@@ -1,5 +1,6 @@
 html {
     background: linear-gradient(to right,  #050f27, #17fffd);
+    height: 100%;
 }
 
 /* HEADER */
@@ -516,7 +517,7 @@ html {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4)
+    background: linear-gradient(to right,  #15161a, #17fffd);
 }
 
 #quizzes-modal .quizzes-modal-content {
@@ -525,6 +526,7 @@ html {
     right: 50%;
     height: 100%;
     transform: translate(50%);
+    /* background: linear-gradient(to right,  #15161a, #17fffd); */
 }
 
 #quizzes-modal #show-word {
@@ -582,7 +584,8 @@ html {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    text-align: center
+    text-align: center;
+    background: linear-gradient(to right,  #15161a, #17fffd);
 }
 
 #quizzes-modal #result-modal .result-modal-content {
@@ -593,6 +596,7 @@ html {
     width: 60%;
     height: 40%;
     padding: 10px 16px;
+    background: linear-gradient(to right,  #17fffd, #15161a);
 }
 
 #quizzes-modal #result-modal .result-modal-content .exit-btn {
