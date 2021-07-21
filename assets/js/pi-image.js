@@ -394,9 +394,9 @@ for (var i=0; i<tabs.length; i++) {
 }
 
     // dropdown avatar
-var dropdown = document.getElementById('avatar')
+var dropdown = document.getElementById('avatar-btn')
 dropdown.onclick = function() {
-    dropdownClick('dropdown-content')
+    dropdownClick('dropdown-content-avt')
 }
 
     // admin access

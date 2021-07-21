@@ -29,7 +29,7 @@ function startView(header, main) {
         var header = document.getElementById(header)
         header.classList.toggle('down-header')
         var main = document.getElementById(main)
-        document.getElementById('dropdown-content').classList.remove('w3-show')
+        document.getElementById('dropdown-content-avt').classList.remove('w3-show')
     
         if (!main.className.includes('w3-show') && !main.className.includes('show-main')) {
             main.classList.toggle('w3-show')
@@ -79,7 +79,7 @@ function logOut(header, main) {
     var header = document.getElementById(header)
     header.classList.toggle('down-header')
     var main = document.getElementById(main)
-    document.getElementById('dropdown-content').classList.remove('w3-show')
+    document.getElementById('dropdown-content-avt').classList.remove('w3-show')
 
     if (!main.className.includes('w3-show') && !main.className.includes('show-main')) {
         main.classList.toggle('w3-show')
@@ -107,7 +107,7 @@ function logOut(header, main) {
 
 // EVENT
     // dropdown click
-dropdownClick('avatar', 'dropdown-content')
+dropdownClick('avatar-btn', 'dropdown-content-avt')
 
     // login
 
