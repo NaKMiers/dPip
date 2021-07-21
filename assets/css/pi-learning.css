@@ -1,8 +1,10 @@
+html {
+    background: linear-gradient(to right,  #050f27, #17fffd);
+}
+
 /* HEADER */
 #header {
     transition: top 1s;
-    /* top: -56px;
-    */
 }
 
 .down-header {
