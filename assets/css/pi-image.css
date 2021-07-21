@@ -24,12 +24,30 @@ html {
     margin: 0px 0px;
     padding: 0px 3px;
     box-shadow: 0px 0px 6px 1px #fff;
+    background-color: #000;
     color: #fff;
 }
 
 #menu {
-    padding: 7px 15.8px;
+    padding: 0;
+}
+
+#menu-btn {
+    width: 56px;
+    line-height: 56px;
     font-size: 28px;
+}
+
+#dropdown-content-menu {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0px;
+    width: 100%;
+}
+
+.show-table {
+    display: table !important;
 }
 
 #avatar-btn {
@@ -68,6 +86,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
+    font-size: 18px;
 }
 
 #search-bar {
@@ -104,6 +123,7 @@ html {
     padding: 8px 16px;
     width: 64%;
     margin: auto;
+    margin-top: 7px;
 }
 
 #add-image input {
@@ -222,4 +242,14 @@ html {
         transform: scale(0)
     }
 
+}
+
+@media (max-width: 600px) {
+    #add-image {
+        margin-top: 12px;
+    }
+
+    #dropdown-content-menu {
+        font-size: 15px;
+    }
 }

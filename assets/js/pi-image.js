@@ -35,7 +35,14 @@ function moveTab(tabBtn, tabContentId) {
 // dropdown avatar
 function dropdownClick(id) {
     var e = document.getElementById(id)
-    e.classList.toggle('w3-show')  
+    if (e.className.includes('table') && !e.className.includes('show-table')) {
+        e.classList.add('show-table')
+    } else if (e.className.includes('table show-table')) {
+        e.classList.remove('show-table')
+    } else {
+        e.classList.toggle('w3-show')
+    }
+    
 }
 
 // admin access
@@ -394,9 +401,15 @@ for (var i=0; i<tabs.length; i++) {
 }
 
     // dropdown avatar
-var dropdown = document.getElementById('avatar-btn')
-dropdown.onclick = function() {
+var dropdownAvt = document.getElementById('avatar-btn')
+dropdownAvt.onclick = function() {
     dropdownClick('dropdown-content-avt')
+}
+
+    // dropdown menu
+var dropdownMenu = document.getElementById('menu-btn')
+dropdownMenu.onclick = function() {
+    dropdownClick('dropdown-content-menu')
 }
 
     // admin access

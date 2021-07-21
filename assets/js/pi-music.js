@@ -338,7 +338,7 @@ function dropdownClick(id) {
     e.classList.toggle('w3-show')  
 }
 
-var dropdown = document.getElementById('avatar-btn')
-dropdown.onclick = function() {
+var dropdownAvt = document.getElementById('avatar-btn')
+dropdownAvt.onclick = function() {
     dropdownClick('dropdown-content-avt')
 }

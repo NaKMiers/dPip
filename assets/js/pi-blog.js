@@ -10,8 +10,8 @@ function dropdownClick(id) {
 
 // EVENT
     // dropdown avatar
-var dropdown = document.getElementById('avatar-btn')
-dropdown.onclick = function() {
+var dropdownAvt = document.getElementById('avatar-btn')
+dropdownAvt.onclick = function() {
     dropdownClick('dropdown-content-avt')
 }
 

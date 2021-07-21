@@ -4,8 +4,8 @@ const $$ = document.querySelectorAll.bind(document)
 // FUNCTION
 
 // dropdown-click
-var dropdown = document.getElementById('avatar-btn')
-dropdown.onclick = function() {
+var dropdownAvt = document.getElementById('avatar-btn')
+dropdownAvt.onclick = function() {
     dropdownClick('dropdown-content-avt')
 }
 
