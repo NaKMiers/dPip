@@ -87,14 +87,14 @@
     transform: translate(-50%, -50%);
 }
 
-#yesss{
+#yesss {
     position: absolute;
     width: 33%;
     height: 100%;
     top: 0%;
     left: 0%;
     transition: transform 0.4s;
-    background: url('https://images.pexels.com/photos/3825278/pexels-photo-3825278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
+    background: url('../img/yes.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -106,7 +106,7 @@
     top: 0%;
     right: 0%;
     transition: transform 0.4s;
-    background: url('https://images.pexels.com/photos/3825295/pexels-photo-3825295.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
+    background: url('../img/no.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -340,6 +340,9 @@
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 15px 1px #000;
     font-weight: bold;
+    color: #333;
+    text-shadow: 3px 3px 2px #fff;
+    border-radius: 8px;
 }
 
 
@@ -601,6 +604,11 @@
 }
 
 @media (max-width: 600px) {
+    /* yes or no */
+    #yesss, #noooo  {
+        box-shadow: 0px 0px 10px 1px #000;
+    }    
+
     /* remember */
     #remember-area {
         width: 75%;
@@ -621,6 +629,9 @@
 
     #remember #fail-rem-game {
         width: 71%;
+        color: #333;
+        text-shadow: 3px 3px 2px #fff;
+        border-radius: 8px;
     }
     
     /* quizzes */
@@ -644,6 +655,11 @@
 }
 
 @media (max-width: 992px) and (min-width: 601px) {
+    /* yes or no */
+    #yesss, #noooo  {
+        box-shadow: 0px 0px 10px 1px #000;
+    }    
+    
     /* remember */
     #remember-area {
         width: 55%;
@@ -664,6 +680,9 @@
 
     #remember #fail-rem-game {
         width: 52%;
+        color: #333;
+        text-shadow: 3px 3px 2px #fff;
+        border-radius: 8px;
     }
 
     /* quizzes */
