@@ -10,9 +10,9 @@ user.onSubmit = function(data) {
 
 // FUNCTION
 
-if (JSON.parse(localStorage.getItem('activeBtn')) && JSON.parse(localStorage.getItem('loginConfirm'))) {
-    startView('header', 'main')
-}
+// if (JSON.parse(localStorage.getItem('activeBtn')) && JSON.parse(localStorage.getItem('loginConfirm'))) {
+//     startView('header', 'main')
+// }
 
 // show view
 if (localStorage.getItem('loginConfirm') === 'true') {
