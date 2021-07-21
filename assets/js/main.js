@@ -10,6 +10,10 @@ user.onSubmit = function(data) {
 
 // FUNCTION
 
+if (JSON.parse(localStorage.getItem('activeBtn')) && JSON.parse(localStorage.getItem('loginConfirm'))) {
+    startView('header', 'main')
+}
+
 // show view
 if (localStorage.getItem('loginConfirm') === 'true') {
     var subStartBtn = document.getElementById('sub-start')
@@ -117,16 +121,9 @@ LogOutBtn.onclick = () => {
     logOut('header', 'main')
 }
 
-console.log('holly shit')
-
     // Start everything
 var startBtn = document.getElementById('start')
 var subStartBtn = document.getElementById('sub-start')
 startBtn.onclick = () => {
     startView('header', 'main')
 }
-
-
-console.log('just test')
-console.log('what the fuck')
-console.log('shit')

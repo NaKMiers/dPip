@@ -146,6 +146,7 @@ function loadBGSelection() {
         background.onclick = () => {
             chooseBGIndex = index
             blogModalContent.style.background = `url("${backgroundList[index]}")`
+            blogModalContent.style.backgroundSize = 'cover'
             blogModalContent.style.backgroundPosition = 'center'
         }
     })
