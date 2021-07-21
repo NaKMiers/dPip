@@ -182,20 +182,10 @@ html {
     left: 12px;
 }
 
-
-/* #home #home-area .image-column .image-item:hover .delete,
-#discover #discover-area .image-column .image-item:hover .delete,
-#mood #mood-area .image-column .image-item:hover .delete,
-#funny #funny-area .image-column .image-item:hover .delete,  */
 #my-self #my-self-area .image-column .image-item:hover .delete {
     display: block;
 }
 
-
-/* #home #home-area .image-column .image-item:hover .edit,
-#discover #discover-area .image-column .image-item:hover .edit,
-#mood #mood-area .image-column .image-item:hover .edit,
-#funny #funny-area .image-column .image-item:hover .edit, */
 #my-self #my-self-area .image-column .image-item:hover .edit {
     display: block;
 }
@@ -245,11 +235,25 @@ html {
 }
 
 @media (max-width: 600px) {
+    /* add image container */
     #add-image {
         margin-top: 12px;
     }
 
+    /* menu content */
     #dropdown-content-menu {
         font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+    /* add image container */
+    #add-image {
+        margin-top: 12px;
+    }
+
+    /* menu content */
+    #dropdown-content-menu {
+        font-size: 18px;
     }
 }

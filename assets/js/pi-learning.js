@@ -3,15 +3,28 @@ const $$ = document.querySelectorAll.bind(document)
 
 // FUNCTION
 
-// dropdown-click
+    // dropdown avatar
 var dropdownAvt = document.getElementById('avatar-btn')
 dropdownAvt.onclick = function() {
     dropdownClick('dropdown-content-avt')
 }
 
+    // dropdown menu
+var dropdownMenu = document.getElementById('menu-btn')
+dropdownMenu.onclick = function() {
+    dropdownClick('dropdown-content-menu')
+}
+
+
 function dropdownClick(id) {
-    var e = $('#' + id)
-    e.classList.toggle('w3-show')  
+    var e = document.getElementById(id)
+    if (e.className.includes('table') && !e.className.includes('show-table')) {
+        e.classList.add('show-table')
+    } else if (e.className.includes('table show-table')) {
+        e.classList.remove('show-table')
+    } else {
+        e.classList.toggle('w3-show')
+    }   
 }
 
 // move tab

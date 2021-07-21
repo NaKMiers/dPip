@@ -41,8 +41,7 @@ function dropdownClick(id) {
         e.classList.remove('show-table')
     } else {
         e.classList.toggle('w3-show')
-    }
-    
+    }   
 }
 
 // admin access
