@@ -13,8 +13,8 @@ user.onSubmit = function(data) {
 // show view
 if (localStorage.getItem('loginConfirm') === 'true') {
     var subStartBtn = document.getElementById('sub-start')
-    subStartBtn.classList.remove('w3-red')
-    subStartBtn.classList.add('w3-green')
+    subStartBtn.classList.remove('w3-black')
+    subStartBtn.classList.add('w3-white')
 }
 
 function startView(header, main) {
@@ -22,8 +22,8 @@ function startView(header, main) {
         var subStartBtn = document.getElementById('sub-start')
         localStorage.setItem('activeBtn', 'true')
         if (localStorage.getItem('activeBtn') === 'true') {
-            subStartBtn.classList.remove('w3-red')
-            subStartBtn.classList.add('w3-green')
+            subStartBtn.classList.remove('w3-black')
+            subStartBtn.classList.add('w3-white')
         }
 
         var header = document.getElementById(header)
@@ -72,8 +72,8 @@ function logOut(header, main) {
     var subStartBtn = document.getElementById('sub-start')
     localStorage.setItem('activeBtn', 'false')
     if (localStorage.getItem('activeBtn') === 'false') {
-        subStartBtn.classList.add('w3-red')
-        subStartBtn.classList.remove('w3-green')
+        subStartBtn.classList.add('w3-black')
+        subStartBtn.classList.remove('w3-white')
     }
 
     var header = document.getElementById(header)

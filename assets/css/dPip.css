@@ -12,6 +12,9 @@
     cursor: pointer;
     box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
     transition: width 0.8s ease-in-out, height 1.6s ease-in-out, top 1.6s ease-in-out;
+    background-image: url(../img/asf.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .down-button {
@@ -45,6 +48,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: 0px 0px;
 }
 
 /* HEADER */
@@ -63,6 +67,17 @@
 }
 
 #slogan {
+    position: fixed;
+    top: 28px;
+    left: 63px;
+    transform: translate(0%, -50%);
+    margin: 0px 0px;
+    padding: 0px 3px;
+    box-shadow: 0px 0px 6px 1px #fff;
+    color: #fff;
+}
+
+#main-slogan {
     padding: 10px 10px;
     letter-spacing: 3px;
 }
@@ -113,6 +128,7 @@
     position: relative;
     height: 50%;
     overflow: hidden;
+    margin: 0px 0px;
 }
 
 #content .content .description {
@@ -127,22 +143,22 @@
 
 .img1-1, .img2-1, .img3-4, .img4-4 {
     position: relative;
-    animation: animatetop ease-in-out 2s;
+    animation: animatetop ease-in-out 1.75s;
 }
 
 .img1-3, .img2-3, .img3-3, .img4-1 {
     position: relative;
-    animation: animatebottom ease-in-out 3s;
+    animation: animatebottom ease-in-out 2s;
 }
 
 .img1-2, .img2-2, .img3-1, .img4-2 {
     position: relative;
-    animation: animateleft ease-in-out 4s;
+    animation: animateleft ease-in-out 2.5s;
 }
 
 .img1-4, .img2-4, .img3-2, .img4-3 {
     position: relative;
-    animation: animateright ease-in-out 5s;
+    animation: animateright ease-in-out 2.5s;
 }
 
 @media (min-width: 601px) {
@@ -262,5 +278,32 @@
 
 }
 
+
+@media (max-width: 600px) {
+    #content .content {
+        margin: 5.3px 0px;
+    }
+
+    #main {
+        /* background-image: ue; */
+        padding: 0px 0px;
+    }
+
+    #main::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: -100%;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/asf.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #modal-content {
+        width: 100% !important;
+    }
+}
 
 

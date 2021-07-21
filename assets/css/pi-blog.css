@@ -15,10 +15,12 @@
 
 #slogan {
     position: fixed;
-    top: 34px;
-    left: 60px;
+    top: 28px;
+    left: 63px;
+    transform: translate(0%, -50%);
     margin: 0px 0px;
-    padding: 0px 0px;
+    padding: 0px 3px;
+    box-shadow: 0px 0px 6px 1px #fff;
     color: #fff;
 }
 
@@ -149,14 +151,16 @@
 
 #blog-modal .btn {
     position: absolute;
-    top: 98px;
-    right: -400px;
+    top: 65px;
+    right: -385px;
     width: 10%;
     overflow: hidden;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     transition: right ease-in-out 1.2s;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(240, 230, 140, 0.2);
+    color: #000;
+    text-shadow: 2px 0px 1px #fff, 1px 0px 2px khaki;
 }
 
 .show-btn-list {
@@ -165,26 +169,26 @@
 
 #blog-modal .btn .show {
     width: 10px;
-    padding: 8px;
+    padding: 6px;
 }
 
 #blog-modal .btn .save {
-    padding: 8px;
+    padding: 6px;
     width: 100%;
 }
 
 #blog-modal .btn .exit {
-    padding: 8px;
+    padding: 6px;
     width: 100%;
 }
 
 #blog-modal .btn .select-background {
-    padding: 8px;
+    padding: 6px;
     width: 100%;
 }
 
 #blog-modal .btn .select-text-color  {
-    padding: 8px;
+    padding: 6px;
     width: 100%;
 }
 
