@@ -658,7 +658,7 @@ function renderDict(prevented) {
     var words = JSON.parse(localStorage.getItem('dictionary'))
     var data = words.map((word, index) => {
         return `
-            <li class="w3-row w3-display-container w3-blue">
+            <li class="w3-row w3-display-container w3-black">
                 <div class="word vocabulary w3-col s12 m5" idx="${word.id}">${word.vocabulary}</div>
                 <input type="text" name="edit-vocabulary" class="w3-input w3-col s12 m5 w3-border" placeholder="Type some different...">
                 <div class="word mean w3-col s12 m5" idx="${word.id}">${word.mean}</div>
